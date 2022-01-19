@@ -16,8 +16,12 @@ const db = {
     genre: "souls-like"
 }
 
+app.get('/', (req, res) => {
+    return res.send('Welcome to GamePls API!');
+})
+
 app.get('/dark-souls', (req, res) => {
-    res.json(db)
+    return res.json(db);
 })
 
 app.listen(PORT);
