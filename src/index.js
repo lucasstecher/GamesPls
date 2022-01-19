@@ -1,5 +1,4 @@
 const express = require('express');
-const PORT = 5000;
 
 const app = express();
 
@@ -24,5 +23,5 @@ app.get('/dark-souls', (req, res) => {
     return res.json(db);
 })
 
-app.listen(PORT);
-console.log('Server Running on PORT: ' + PORT);
+app.listen(process.env.PORT || 5000);
+console.log('Server Running');
