@@ -1,5 +1,5 @@
 {
-  "name": "JojosAPI",
+  "name": "jojosapi",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Lucas Stecher <lucasvieira0070@gmail.com>",
@@ -9,8 +9,5 @@
   },
   "scripts": {
     "dev": "nodemon src/index.js"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }
