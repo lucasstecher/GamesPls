@@ -5,6 +5,7 @@
   "author": "Lucas Stecher <lucasvieira0070@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2"
   },
   "scripts": {
