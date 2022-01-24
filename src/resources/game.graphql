@@ -14,6 +14,21 @@ type Query {
             story: String!,
             genre: String!,
         ): Game!
+
+        updateGame(
+            id: ID!,
+            title: String,
+            picture: String,
+            rating: Int,
+            studio: String,
+            release_date: String,
+            story: String,
+            genre: String,
+        ): Game!
+
+        deleteGame(
+            id: ID!
+        ): Game!
     }
 
     type Game {
