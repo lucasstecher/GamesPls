@@ -25,7 +25,6 @@ const resolvers = {
             createGame: async (_, args) => {
             try {
                 const resultCreate = await Game.create({
-                    id: args.id,
                     title: args.title,
                     picture: args.picture,
                     rating: args.rating,
@@ -42,17 +41,11 @@ const resolvers = {
 
         updateGame: async (_, args) => {
             try {
-                const resultUpdate = await Game.update({
-                    id: args.id,
-                    title: args.title,
-                    picture: args.picture,
-                    rating: args.rating,
-                    studio: args.studio,
-                    release_date: args.release_date,
-                    story: args.release_date,
-                    genre: args.genre
-                }, { where: { id: args.id } } );
-                return resultUpdate;
+                const gameToUptade = await Game.findByPk(args.id);
+                gameToUptade.set({
+                    ...args
+                });
+                return await gameToUptade.save();
             } catch(err) {
                 console.log(err);
             }

@@ -5,7 +5,6 @@ type Query {
 
     type Mutation {
         createGame(
-            id: ID!,
             title: String!,
             picture: String!,
             rating: Int!,
@@ -16,7 +15,7 @@ type Query {
         ): Game!
 
         updateGame(
-            id: ID!,
+            id: ID,
             title: String,
             picture: String,
             rating: Int,
@@ -28,7 +27,7 @@ type Query {
 
         deleteGame(
             id: ID!
-        ): Game!
+        ): Boolean
     }
 
     type Game {
