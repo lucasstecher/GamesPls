@@ -13,7 +13,11 @@ app.options('*', cors());
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    debug: true,
+    tracing: true,
+    introspection: true,
+    playground: true
 });
 
 server
