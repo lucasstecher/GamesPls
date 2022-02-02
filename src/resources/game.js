@@ -30,7 +30,7 @@ const resolvers = {
                     rating: args.rating,
                     studio: args.studio,
                     release_date: args.release_date,
-                    story: args.release_date,
+                    story: args.story,
                     genre: args.genre,
                 });
                 return resultCreate;
